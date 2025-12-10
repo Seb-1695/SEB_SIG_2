@@ -1,0 +1,21 @@
+Algoritmo Suma_de_N_Pares_Desde_N
+    Definir N, inicio, suma, contador, numero_par Como Entero
+	
+    imprimir "Ingrese un numero:"
+    Leer N
+    Si N / 2 = 0 Entonces
+        inicio <- N
+    Sino
+        inicio <- N + 1
+    FinSi
+    suma=suma+0
+    contador=contador+1
+	
+    Mientras contador <= N Hacer
+        numero_par <- inicio + (contador - 1 ) * 2
+        suma <- suma + numero_par
+        contador <- contador + 1
+    FinMientras
+	
+    imprimir "La suma es: ", suma
+FinAlgoritmo
