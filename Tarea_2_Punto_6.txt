@@ -1,0 +1,23 @@
+Algoritmo M_C_D
+	Definir num, mcd Como Entero
+	
+	Imprimir "Ingrese un numero y un negativo cuando desee terminar:"
+	Leer num
+mcd <- num
+Repetir
+	Imprimir "Ingrese otro número: "
+	Leer num
+	Si num >= 0 Entonces
+		Definir a, b, r Como Entero
+		a <- mcd
+		b <- num
+		Repetir
+			r <- a % b
+			a <- b
+			b <- r
+		Hasta Que r = 0
+		mcd <- a
+	FinSi
+Hasta Que num < 0
+Imprimir "El MCD de todos los números ingresados es: ", mcd
+FinProceso

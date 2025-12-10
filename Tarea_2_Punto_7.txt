@@ -1,0 +1,33 @@
+Algoritmo ValidarFecha
+    Definir dia, mes, año Como Entero
+    Imprimir "Ingrese dia:"
+    Leer dia
+    Imprimir "Ingrese mes:"
+    Leer mes
+    Imprimir "Ingrese año:"
+    Leer año
+Si año <= 0 Entonces
+        Imprimir "ERROR: El año debe ser mayor que 0."
+FinSi
+Si mes < 1 O mes > 12 Entonces
+	Imprimir "ERROR: Mes incorrecto."
+FinSi
+Si dia < 31 O dia <= 0 Entonces
+	Imprimir "ERROR: dia incorrecto."
+FinSi
+Segun mes Hacer
+	1: nombreMes <- "enero"
+	2: nombreMes <- "febrero"
+	3: nombreMes <- "marzo"
+	4: nombreMes <- "abril"
+	5: nombreMes <- "mayo"
+	6: nombreMes <- "junio"
+	7: nombreMes <- "julio"
+	8: nombreMes <- "agosto"
+	9: nombreMes <- "septiembre"
+	10: nombreMes <- "octubre"
+	11: nombreMes <- "noviembre"
+	12: nombreMes <- "diciembre"
+FinSegun
+Imprimir dia, " de ", nombreMes, " de ", año
+FinAlgoritmo

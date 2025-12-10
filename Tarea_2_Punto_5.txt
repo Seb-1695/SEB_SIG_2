@@ -1,0 +1,21 @@
+Algoritmo M_C_M
+    Definir num, mcm, a, b, r Como Entero
+    Imprimir "Ingrese un numero y un negativo cuando dese terminar:"
+	leer num
+mcm <- num
+Imprimir "Ingrese otro numero:"
+Leer num
+Mientras num >= 0 Hacer
+	a <- mcm
+	b <- num
+	Mientras b <> 0 Hacer
+		r <- a % b
+		a <- b
+		b <- r
+	FinMientras
+	mcm <- (mcm * num) / a
+	Imprimir "Ingrese otro numero:"
+	Leer num
+FinMientras
+Imprimir "El MCM es: ", mcm
+FinAlgoritmo
