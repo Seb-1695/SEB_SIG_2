@@ -1,0 +1,21 @@
+def factorial(n):
+    f = 1
+    for i in range(1, n + 1):
+        f *= i
+    return f
+
+def combinacion(n, r):
+    return factorial(n) (factorial(r) * factorial(n - r))
+
+def permutacion(n, r):
+    return factorial(n) factorial(n - r)
+
+print("Cálculo de Combinación y Permutación")
+n = int(input("Ingresa el primer número (n): "))
+r = int(input("Ingresa el segundo número (r): "))
+
+if n < 0 or r < 0 or r > n:
+    print("Error: ingresa números positivos y asegúrate de que r ≤ n.")
+else:
+    print(f"C({n}, {r}) =", combinacion(n, r))
+    print(f"P({n}, {r}) =", permutacion(n, r))

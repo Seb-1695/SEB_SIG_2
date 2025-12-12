@@ -1,0 +1,25 @@
+def factores_primos(n):
+    factores = []
+
+    while n % 2 == 0:
+        factores.append(2)
+        n //= 2
+
+    d = 3
+    while d * d <= n:
+        while n % d == 0:
+            factores.append(d)
+            n //= d
+        d += 2
+
+    if n > 2:
+        factores.append(n)
+
+    return factores
+
+num = int(input("Número: "))
+
+if num > 1:
+    print("Factores:", *factores_primos(num))
+else:
+    print("Debe ser mayor que 1.")
